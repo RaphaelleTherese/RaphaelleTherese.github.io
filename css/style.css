@@ -209,28 +209,28 @@ ul{
     animation-fill-mode: forwards;
 }
 .project-1{
-    background-image: url(Images/website-1.PNG);
+    background-image: url("Images/website-1.PNG");
     background-size: 100% 100%;
     position: relative;
 }
 .project-2{
-     background-image: url(Images/website-2.PNG);
+     background-image: url("Images/website-2.PNG");
      background-size: 100% 100%;
 }
 .project-3{
-    background-image: url(Images/website-3.PNG);
+    background-image: url("Images/website-3.PNG");
     background-size: 100% 100%;
 }
 .project-4{
-    background-image: url(Images/website-4.PNG);
+    background-image: url("Images/website-4.PNG");
     background-size: 100% 100%;
 }
 .project-5{
-    background-image: url(Images/website-5.PNG);
+    background-image: url("Images/website-5.PNG");
     background-size: 100% 100%;
 }
 .project-6{
-    background-image: url(Images/website-6.PNG);
+    background-image: url("Images/website-6.PNG");
     background-size: 100% 100%;
 }
 
