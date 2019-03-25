@@ -1,0 +1,393 @@
+
+/*COLOR PALLETTETETETET: https://coolors.co/59c3c3-133c55-386fa4-84d2f6-91e5f6*/
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Barrio';
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+.container{
+    border: solid 1px black;
+    width: 750px;
+    height: 750px;
+    margin: auto;
+    cursor: default;
+}
+/*-----SCENE 1-----*/
+#scene1{
+    position: absolute;
+    background-color: deepskyblue;
+    text-align: center;
+    width: 750px;
+    height: 750px;
+    visibility: visible;
+}
+/*-----TITLE ANIMATION-----*/
+#title{
+    position: absolute;
+    font-size: 55px;
+    margin-left: 50px;
+    margin-top: -500px;
+    animation: titleIn 1s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    animation-fill-mode: forwards;
+    z-index: 3;
+}
+@keyFrames titleIn{
+    0%{
+       margin-top: -500px;
+    }
+    90%{
+       margin-top: 25px; 
+    }
+    95%{
+        margin-top: 10px;
+    }
+    100%{
+        margin-top: 25px;
+    }
+}
+#titleShadow{
+    position: absolute;
+    width: 500px;
+    height: 25px;
+    background-color: black;
+    border-radius: 50%;
+    opacity: .15;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 315px;
+    animation: titleShadow 1s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    animation-fill-mode: forwards
+    ;
+}
+@keyFrames titleShadow{
+    0%{
+        width: 650px;
+    }
+    90%{
+        width: 500px;
+    }
+    95%{
+        width: 525px;
+    }
+    100%{
+        width: 500px;
+    }
+}
+#playButton{
+    position: absolute;
+    margin-top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #62BFED;
+    padding: 10px;
+    width: 150px;
+    border-radius: 30px;
+    border: solid white 4px;
+}
+#playButton:hover{
+    background-color: #1C77C3;
+    border: solid white 3px;
+    cursor: pointer;
+    text-shadow: 3px 3px #62BFED;
+}
+#playButton:active{
+    border: solid white 2px;
+    text-shadow: 2px 2px #62BFED;
+}
+/*-----SCENE TWO-----*/
+#scene2{
+    position: absolute;
+    background-color: #1C77C3;
+    text-align: center;
+    width: 750px;
+    height: 750px;
+    visibility: hidden;
+}
+#scene2 h1{
+    font-size: 50px;
+    margin-top: 125px;
+}
+#rock{
+    position: absolute;
+    background-image: url(Images/Rock.png);
+    background-size: 100% 100%;
+    width: 200px;
+    height: 200px;
+    margin-left: 25px;
+    margin-top: 125px;
+    animation: float 2s infinite;
+}
+#paper{
+    position: absolute;
+    background-image: url("Images/Paper.png");
+    background-size: 100% 100%;
+    width: 200px;
+    height: 200px;
+    margin-left: 275px;
+    margin-top: 125px;
+    animation: float 2s 250ms infinite;
+}
+#scissors{
+    position: absolute;
+    background-image: url("Images/Scissors.png");
+    background-size: 100% 100%;
+    width: 200px;
+    height: 200px;
+    margin-left: 525px;
+    margin-top: 125px;
+    animation: float 2s 750ms infinite;
+}
+/*-----HOVER ANIMATIONS-----*/
+#rock:hover, #paper:hover, #scissors:hover{
+    animation: hoverChoose 1s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+@keyFrames float{
+    0%{
+        margin-top: 125px;
+    }
+    50%{
+        margin-top: 75px;
+    }
+    100%{
+        margin-top: 125px;
+    }
+}
+@keyFrames hoverChoose{
+    100%{
+       margin-top: 25px; 
+    }
+}
+.shadowWeapon{
+    position: absolute;
+    width: 150px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: black;
+    opacity: .25;
+    margin-top: 325px;
+}
+#rockShadow{
+    margin-left: 50px;
+    width: 150px;
+    animation: rockShadow 2s infinite;
+}
+#rockShadow:hover{
+    animation: rockShadowChoose 1s;
+    animation-fill-mode: forwards;
+}
+#paperShadow{
+    margin-left: 300px;
+    animation: paperShadow 2s 250ms infinite;
+}
+#scissorsShadow{
+    margin-left: 550px;
+    animation: scissorsShadow 2s 750ms infinite;
+}
+@keyFrames rockShadow{
+    0%{
+        width: 150px;
+        margin-left: 50px;
+    } 
+    50%{
+        width: 200px;
+        margin-left: 25px;
+    }
+    100%{
+        width: 150px;
+        margin-left: 50px;
+    }
+}
+@keyFrames paperShadow{
+    0%{
+        width: 150px;
+        margin-left: 300px;
+    } 
+    50%{
+        width: 200px;
+        margin-left: 275px;
+    }
+    100%{
+        width: 150px;
+        margin-left: 300px;
+    }
+}
+@keyFrames scissorsShadow{
+    0%{
+        width: 150px;
+        margin-left: 550px;
+    } 
+    50%{
+        width: 200px;
+        margin-left: 525px;
+    }
+    100%{
+        width: 150px;
+        margin-left: 550px;
+    }
+}
+/*-----SCENE THREE-----*/
+#scene3{
+    position: absolute;
+    background-color: #84D2F6;
+    text-align: center;
+    width: 750px;
+    height: 750px;
+    visibility: hidden;
+}
+.userWeapon{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 250px;
+}
+#userRock{
+    background-image: url("Images/Rock.png");
+    background-size: 100% 100%;
+    visibility: hidden;
+}
+#userPaper{
+    background-image: url("Images/Paper.png");
+    background-size: 100% 100%;
+    visibility: hidden;
+}
+#userScissors{
+    background-image: url("Images/Scissors.png");
+    background-size: 100% 100%;
+    visibility: hidden;
+}
+.compWeapon{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 250px;
+}
+#compRock{
+    background-image: url("Images/Rock.png");
+    background-size: 100% 100%;
+    visibility: hidden;
+}
+#compPaper{
+    background-image: url("Images/Paper.png");
+    background-size: 100% 100%;
+    visibility: hidden;
+}
+#compScissors{
+    background-image: url("Images/Scissors.png");
+    background-size: 100% 100%;
+    visibility: hidden;
+}
+.health{
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    background-color: #00FF7F;
+    margin-top: 175px;
+}
+@keyFrames userAttack{
+    0%{
+        margin-left: 100px;
+    }
+    50%{
+        margin-left: 315px;
+    }
+    100%{
+        margin-left: 100px;
+    }
+}
+@keyFrames compAttack{
+    0%{
+        margin-left: 450px;
+    }
+    50%{
+        margin-left: 315px;
+    }
+    100%{
+        margin-left: 450px;
+    }
+}
+#userHealth{ 
+    margin-left: 100px;
+    transition: width 500ms;
+}
+#compHealth{
+    margin-left: 450px;
+    transition: width 500ms;
+}
+#attackButton{
+    position: absolute;
+    width: 125px;
+    height: 75px;
+    background-color: #1C77C3;
+    margin-top: 675px;
+    visibility: hidden;
+}
+#attackButton:hover{
+    background-color: #386FA4;
+    cursor: pointer;
+}
+#nextButton{
+    position: absolute;
+    width: 125px;
+    height: 75px;
+    background-color: #1C77C3;
+    margin-top: 675px;
+    margin-left: 625px;
+    visibility: hidden;
+}
+#nextButton:hover{
+    background-color: #386FA4;
+    cursor: pointer;
+}
+#outcomePopup{
+    visibility: hidden;
+    width: 550px;
+    height: 550px;
+    background-color: #133C55;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#outcome{
+    font-size: 100px;
+}
+#playAgain{
+    height: 75px;
+    width: 150px;
+    background-color: #1C77C3;
+    margin-top: 250px;
+    margin-left: 200px;
+    position: absolute;
+}
+#playAgain:hover{
+    opacity: .75;
+    cursor: pointer;
+}
+@keyFrames display{
+    0%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyFrames displayInverse{
+    0%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        
+        <title>RPS</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
+        
+    </head>
+     <body>
+         <div class="container">
+<!-----SCENE 1----->
+             <div id="scene1">
+                <div id="title">
+                    <h1>Rock, Paper, <br>
+                    Scissors</h1>
+                 </div>
+                 <div id="titleShadow"></div>
+                 <div id="playButton" onclick="changeScene('scene1', 'scene2')">
+                    <h1>PLAY</h1>
+                 </div>
+            </div>
+<!-----SCENE 2----->
+             <div id="scene2">
+                <h1>Choose your weapon</h1>
+                 <div id="rock" onclick="chooseWeapons('rock'); changeScene('scene2', 'scene3')"></div>
+                 <div class="shadowWeapon" id="rockShadow"></div>
+                 <div id="paper" onclick="chooseWeapons('paper'); changeScene('scene2', 'scene3')"></div>
+                 <div class="shadowWeapon" id="paperShadow"></div>
+                 <div id="scissors" onclick="chooseWeapons('scissors'); changeScene('scene2', 'scene3')"></div>
+                 <div class="shadowWeapon" id="scissorsShadow"></div>
+             </div>
+<!-----SCENE 3----->
+             <div id="scene3">
+                <h1 style="position: absolute; margin-left: 165px;">YOU</h1>
+                <div class="health" id="userHealth"></div>
+                <div class ="userWeapon" id="userRock"></div>
+                <div class ="userWeapon" id="userPaper"></div>
+                <div class ="userWeapon" id="userScissors"></div>
+                
+                <h1 style="position: absolute; margin-left: 480px;">COMPUTER</h1>
+                <div class="health" id="compHealth"></div>
+                <div class ="compWeapon" id="compRock"></div>
+                <div class ="compWeapon" id="compPaper"></div>
+                <div class ="compWeapon" id="compScissors"></div>
+                  
+                 <div id="attackButton" onclick="healthDisplay()"><h1>ATTACK</h1></div>
+                 <div id="nextButton" onclick="changeScene('scene3', 'scene2');"><h3>Choose next weapon></h3></div>
+                 <div id="outcomePopup"><h1><span id="outcome"></span></h1><br>    
+                    <div id="playAgain" onclick="reload()"><h2>Play Again</h2></div>
+                 </div>
+             </div>
+             
+         </div>
+           
+        <script type="text/javascript" src="urps.js"></script>
+    </body>
+</html>
