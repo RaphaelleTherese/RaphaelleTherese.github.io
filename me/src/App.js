@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Main from './layouts/Main';
+import './style/main.scss';
+import './style/App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const { HOME_URL } = "https://raphaelletherese.github.io/";
+
+// === PAGES ===
+const Index = lazy(() => import('./pages/Index'));
+
+const App = () => (
+    <BrowserRouter basename={HOME_URL}>
+        <Suspense fallback={<Main />}>
+        <Switch>
+            <Route exact path="/" component={Index} />
+            {/* <Route component={NotFound} status={404} /> */}
+        </Switch>
+        </Suspense>
+  </BrowserRouter>
+);
 
 export default App;
