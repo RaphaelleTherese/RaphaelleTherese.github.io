@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>rpsTester</title>
+        <style>
+        </style>
+    </head>
+    <body>
+        <h1 id="playClick">Play</h1>
+        <h1>Select your weapon: 1 - Rock, 2 - Paper, 3 - Scissors</h1>
+        <!--
+        <form>
+            <h1>
+                Select rock, paper, or scissors:
+                <input type='text' name='userInput' />
+                <input type='button' value='Play' onclick='play(userInput.value)'/>
+            </h1>
+        </form>
+        -->
+        <h1>User Pick: <span id='uPick'></span></h1>
+        <h1>Comp Pick: <span id='cPick'></span></h1>
+        <h1>The Winner: <span id='result'></span></h1>
+        
+        <script>
+            //document.getElementById('playClick').addEventListener('click', function() {play()});
+            document.addEventListener('keydown', function() {
+                if(event.keyCode === 49 || event.keyCode === 97){play('rock')}
+                if(event.keyCode === 50 || event.keyCode ===98){play('paper')}
+                if(event.keyCode === 51 || event.keyCode === 99){play('scissors')}
+            });
+            
+            function userPick(){
+                var response;
+                while (response != 'rock' && response != 'paper' && response != 'scissors') {
+                response = prompt('Enter rock, paper, scissors.');
+                response = response.toLowerCase();
+                }
+                return response;
+            }
+            
+            function compPick(){
+                var compChoice = Math.random();
+                if (compChoice <= 0.33){
+                    compChoice = 'rock';
+                } else if (compChoice <= 0.67) {
+                    compChoice = 'paper'
+                } else {
+                    compChoice = 'scissors';
+                }
+                return compChoice;
+            }
+            
+            function play(uP){
+                var choice1 = uP;
+                //var choice1 = userPick();
+                var choice2 = compPick();
+                var resultMessage;
+                
+                document.getElementById('uPick').innerHTML = choice1;
+                document.getElementById('cPick').innerHTML = choice2;
+                
+                if(choice1 === choice2){
+                    resultMessage = "It is a tie!";
+                }
+                else if(choice1 === 'rock'){
+                    if(choice2 === 'scissors'){
+                        resultMessage = "User WINS!";
+                    } 
+                    else{
+                        resultMessage = "Computer WINS!"
+                    }
+                } 
+                else if(choice1 === 'paper'){
+                    if(choice2 === 'rock'){
+                        resultMessage = "User WINS!";
+                    } 
+                    else {
+                        resultMessage = "Computer WINS!";
+                    }
+                } 
+                else{
+                    if(choice2 === 'paper'){
+                        resultMessage = "User WINS!";
+                    } 
+                    else {
+                        resultMessage = "Computer WINS!"
+                    }
+                }
+                document.getElementById('result').innerHTML = resultMessage;
+            }
+        </script>
+    </body>
+</html>

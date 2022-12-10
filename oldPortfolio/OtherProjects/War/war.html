@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WAR</title>
+        <style>
+            body{
+                font-family: sans-serif;
+                -webkit-user-select: none; /* Safari */
+            }
+            #playingArea{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 750px;
+                width: 750px;
+                background-color: #007233;
+            }
+            #userDeck{
+                position: absolute;
+                height: 275px;
+                width: 200px;
+                margin-left: 20vw; 
+                margin-top: 800px;
+                background-color: #027736;
+                
+                background: url(http://donatetobernard.bernardlieberman.com/images/cardBack.png);
+                background-size: 100% 100%;
+            }
+            .userInfo{
+                position: absolute;
+                margin-left: 20vw; 
+                margin-top: 1100px;
+                width: 200px;
+            }
+            #compDeck{
+                position: absolute;
+                height: 275px;
+                width: 200px;
+                margin-left: 63vw;
+                margin-top: 800px;
+                background-color: #027736;
+                
+                background: url(http://donatetobernard.bernardlieberman.com/images/cardBack.png);
+                background-size: 100% 100%;
+                
+            }
+            .compInfo{
+                position: absolute;
+                margin-left: 63vw;
+                margin-top: 1100px;
+                width: 200px;
+            }
+            #playButton{
+                text-align: center;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 800px;
+            }
+            #playButton:hover{
+                cursor: pointer;
+            }
+            #userCard{
+                position: absolute;
+                height: 275px;
+                width: 200px;
+                margin-top: 100px;
+                margin-left: 100px;
+                text-align: center;
+                font-size: 175px;
+                background-color: #027736;
+            }
+            #compCard{
+                position: absolute;
+                height: 275px;
+                width: 200px;
+                margin-top: 100px;
+                margin-left: 450px;
+                text-align: center;
+                font-size: 175px;
+                background-color: #027736;
+            }
+            
+/*----- ANIMATIONS -----*/
+            #userCard, #compCard {
+              -webkit-perspective: 1000;
+              -moz-perspective: 1000;
+              -o-perspective: 1000;
+              perspective: 1000;
+                
+              position: absolute;
+            }
+
+           
+/*            #userCard:hover #flipper {
+                    animation: cardFlip 1s;
+                    animation-fill-mode: forwards;
+            }
+*/
+            
+            .front, .back, .cFront, .cBack {
+                height: 275px;
+                width: 200px;
+                border-radius: 5%;
+            }
+            
+            @keyFrames cardFlip{
+                0%{
+                    -webkit-transition: 0.6s;
+                    -webkit-transform-style: preserve-3d;
+
+                    -moz-transition: 0.6s;
+                    -moz-transform-style: preserve-3d;
+
+                  -o-transition: 0.6s;
+                    -o-transform-style: preserve-3d;
+
+                    transition: 0.6s;
+                    transform-style: preserve-3d;
+
+                    position: relative;
+
+                  transform-origin: 100% 134px; /* half of height */
+                }
+                100%{
+                    -webkit-transform: rotateY(180deg);
+                    -moz-transform: rotateY(180deg);
+                    -o-transform: rotateY(180deg);
+                    transform: rotateX(-180deg);
+                }
+            }
+
+            #flipper, #cFlipper {
+                -webkit-transition: 0.6s;
+                -webkit-transform-style: preserve-3d;
+
+                -moz-transition: 0.6s;
+                -moz-transform-style: preserve-3d;
+
+              -o-transition: 0.6s;
+                -o-transform-style: preserve-3d;
+
+                transition: 0.6s;
+                transform-style: preserve-3d;
+
+                position: relative;
+
+              transform-origin: 100% 134px; /* half of height */
+            }
+
+            .front, .back, .cFront, .cBack {
+                -webkit-backface-visibility: hidden;
+                -moz-backface-visibility: hidden;
+              -o-backface-visibility: hidden;
+                backface-visibility: hidden;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .front, .cFront {
+                background: url(http://donatetobernard.bernardlieberman.com/images/cardBack.png);
+              background-size: 100% 100%;
+                z-index: 2;
+            }
+
+            .back, .cBack {
+                -webkit-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+              -o-transform: rotateY(180deg);
+                transform: rotateX(180deg);
+
+                background-color: #f8f8f8;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1 style="text-align: center">WAR</h1>
+        
+<!----- PLAYING AREA ----->
+        <div id="playingArea">
+                <div id="userCard">
+                    <div id="flipper">
+                        <div class="front">
+                        </div>
+                        <div class="back">
+                            <div><span id="uCard"></span></div>
+                        </div>
+                    </div>
+                </div>
+            <div id="compCard">
+                <div id="cFlipper">
+                    <div class="cFront">
+                    </div>
+                    <div class="cBack">
+                        <div><span id="cCard"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!----- COMP DECK ----->
+        <div id="compDeck">
+        </div>
+        <div class="compInfo">
+            <div>Deck: <span id="cDeck"></span></div>
+            <div>Hold: <span id="cHold"></span></div>
+            <div>Comp number: <span id="cNum"></span></div>
+        </div>
+      
+        
+        <div id="playButton" onclick="play()"><h2>PLAY!</h2></div>
+        
+<!----- USER DECK ----->
+        <div id="userDeck">    
+        </div>
+        <div class="userInfo">
+            <div>Deck: <span id="uDeck"></span></div>
+            <div>Hold: <span id="uHold"></span></div>
+            <div>Your number: <span id="uNum"></span></div>
+        </div>
+        
+        <script>
+            document.addEventListener("keydown", function(){
+                if(event.keyCode === 13){
+                    deal();
+                }
+            });
+            var deck = [2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10 , 10, 10, 11, 11, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13, 14, 14, 14, 14]
+            
+            var sDeck = [];
+            var uCards = [];
+            var cCards = [];
+            
+            function deal(){
+                sDeck = deck.slice(0);
+                for (var i = sDeck.length - 1; i > 0; i--){
+                    var j = Math.floor(Math.random() * (i + 1));
+                    var temp = sDeck[i];
+                    sDeck[i] = sDeck[j];
+                    sDeck[j] = temp;
+                }
+                
+                uCards = sDeck.splice(0, 26);
+                cCards = sDeck;
+                
+                document.getElementById('uHold').innerHTML = "";
+                document.getElementById('cHold').innerHTML = "";
+                
+                document.getElementById('uCard').innerHTML = "";
+                document.getElementById('cCard').innerHTML = "";
+                
+                document.getElementById('uDeck').innerHTML = uCards;
+                document.getElementById('cDeck').innerHTML = cCards;
+                
+                document.getElementById('uNum').innerHTML = uCards.length;
+                document.getElementById('cNum').innerHTML = cCards.length;
+            }
+            
+            function play(){
+                document.getElementById('uHold').innerHTML = "";
+                document.getElementById('cHold').innerHTML = "";
+                
+                document.getElementById('uDeck').innerHTML = uCards;
+                document.getElementById('cDeck').innerHTML = cCards;
+                
+                document.getElementById('uNum').innerHTML = uCards.length;
+                document.getElementById('cNum').innerHTML = cCards.length;
+                
+                var usersCard = parseInt(uCards.splice(0,1));
+                var compsCard = parseInt(cCards.splice(0,1));
+                
+                var uHold = [];
+                var cHold = [];
+                
+                while(usersCard === compsCard){
+                    uHold = uHold.concat(usersCard);
+                    uHold = uHold.concat(uCards.splice(0,3));
+                    cHold = cHold.concat(compsCard);
+                    cHold = cHold.concat(cCards.splice(0,3));
+                    
+                    if(uCards.length === 0){
+                        alert('User Loses')
+                    }
+                    if(cCards.length === 0){
+                        alert('Comp Loses')
+                    }
+                    
+                    usersCard = parseInt(uCards.splice(0,1));
+                    compsCard = parseInt(cCards.splice(0,1));
+                }
+                displayCards(usersCard, 'uCard');
+                displayCards(compsCard, 'cCard');
+                
+                //document.getElementById('uCard').innerHTML = usersCard;
+                //document.getElementById('cCard').innerHTML = compsCard;
+                
+                document.getElementById('uHold').innerHTML = uHold;
+                document.getElementById('cHold').innerHTML = cHold;
+                
+                if(usersCard > compsCard){
+                    uCards = uCards.concat(uHold);
+                    uCards = uCards.concat(usersCard);
+                    uCards = uCards.concat(cHold);
+                    uCards = uCards.concat(compsCard);
+                } 
+                else{
+                    cCards = cCards.concat(uHold);
+                    cCards = cCards.concat(usersCard);
+                    cCards = cCards.concat(cHold);
+                    cCards = cCards.concat(compsCard);
+                }
+                if(uCards.length === 0){alert('User Loses');}
+                if(cCards.length === 0){alert('Comp Loses');}
+            
+                animationCard('flipper', 'cFlipper');
+            }
+            
+            function displayCards(theCard, theDeck){
+                var show;
+                if (theCard <= 10) {show = theCard;}
+                else if(theCard === 11) {show = "J";}
+                else if(theCard === 12) {show = "Q";}
+                else if(theCard === 13) {show = "K";}
+                else if(theCard === 14) {show = "A";}
+                else{show = "X";}
+                
+                document.getElementById(theDeck).innerHTML = show;
+            }
+            
+            function animationCard(divId, divId2){
+                document.getElementById(divId).style.animation = "cardFlip 1s";
+                document.getElementById(divId).style.animationFillMode = "forwards";
+                    
+                document.getElementById(divId2).style.animation = "cardFlip 1s";
+                document.getElementById(divId2).style.animationFillMode = "forwards";
+            }
+        </script>
+    </body>
+</html>
