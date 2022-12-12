@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!--
+
+   Licensed to the Apache Software Foundation (ASF) under one or more
+   contributor license agreements.  See the NOTICE file distributed with
+   this work for additional information regarding copyright ownership.
+   The ASF licenses this file to You under the Apache License, Version 2.0
+   (the "License"); you may not use this file except in compliance with
+   the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+-->
+<!-- ====================================================================== -->
+<!-- Defines the Batik Logo using an SVG font.                              -->
+<!--                                                                        -->
+<!-- @author vhardy@apache.org                                              -->
+<!-- @author thomas.deweese@kodak.com                                       -->
+<!-- @author bella.robinson@cmis.csiro.au                                   -->
+<!-- @version $Id$    -->
+<!-- ====================================================================== -->
+
+<!-- This file was modified by Michael Tänzer (Neo@NHNG)
+     Namespace problem fixed by Doktorchen-->
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   width="450"
+   height="475"
+   viewBox="-10 0 560 560">
+  <path
+     id="Batik_Squiggle_Green"
+     fill="#33CC33"
+     d="M275,353c-46,12-88,43-114,91c-9,16,6,37,25,33                     c-14,24-40,67-15,81c28,16,52-8,60-15c18,21,50,10,81-17                     c41,14,68-2,103-53c8-12,30-43,30-65c0-16-15-30-35-21                     c-1-12-9-38-53-19c-10-6-31-5-54,17                     C308,375,300,347,275,353z" />
+  <path
+     id="Batik_Squiggle_Red"
+     fill="#FF0000"
+     d="M400,0c-18,3-49,31-49,31c-29,23-43,58-28,95                     c-13,14-29,44-29,67c0,28,20,52,50,29c7,8,21,16,37,5                     c-5,29,3,48,26,49c1,10,13,31,36,17c16-10,58-39,79-56                     c25-23,25-94-18-89c33-59-3-96-27-84c-10,4-46,25-52,30                     c-1-7-5-12-11-14C436,45,436-5,401,0z" />
+  <path
+     id="Batik_Squiggle_Blue"
+     fill="#6666FF"
+     d="M172,44C137,60,31,135,11,199c-8,27,22,48,44,33                     C14,306-1,332,0,356c0,14,13,42,44,27c8-4,35-25,52-41                     c14-1,24-11,42-28c17,14,36,10,52-7c22,2,82-78,44-108                     c-3-24-30-37-53-18c-6-2-13-1-18,1c22-35,43-82,49-105                     C219,47,188,36,172,44z" />
+</svg>
