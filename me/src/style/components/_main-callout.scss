@@ -1,0 +1,49 @@
+.main-callout {
+    display: flex;
+    flex-direction: column;
+    // 3em is from wrapper padding top and bottom
+    height: calc(100vh - $navbar-height - (2 * 3em));
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+// .my-name {
+//     font-size: 5em;
+// }
+// .name-letter {
+//     display: inline-block;
+// }
+// .subtitle {
+//     color: white;
+//     font-size: 28px;
+// }
+.triangle {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform-origin: 20px 20px;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 34.6px 20px;
+    border-color: transparent transparent #68D8D6 transparent;
+    z-index: 10;
+}
+.circle {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    opacity: 0;
+    background-color: #ADBDFF;
+    border-radius: 50%;
+}
+.square {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    opacity: 0;
+    background-color: #2AB7CA;
+}

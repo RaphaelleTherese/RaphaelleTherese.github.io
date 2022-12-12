@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// import ContactIcons from '../Contact/ContactIcons';
+import ContactIcons from '../Contact/ContactIcons';
 
 const { PUBLIC_URL } = process.env; // set automatically from package.json:homepage
 
 const SideBar = () => (
   <section id="sidebar">
     <section id="intro">
-      <Link to="/" className="logo">
+      {/* <Link to="/" className="logo">
         <img src={`${PUBLIC_URL}/images/me.jpg`} alt="" />
-      </Link>
+      </Link> */}
       <header>
-        <h2>Raphaelle Therese Guinanao</h2>
+        <h3>Raphaelle Therese Guinanao</h3>
         <p><a href="mailto:rtguinanao@gmail.com">rtguinanao@gmail.com</a></p>
       </header>
     </section>
@@ -28,7 +28,7 @@ const SideBar = () => (
     </section>
 
     <section id="footer">
-      {/* <ContactIcons /> */}
+      <ContactIcons />
       <p className="copyright">&copy; Raphaelle Therese Guinanao <Link to="/">raphaelletherese.github.io</Link>.</p>
     </section>
   </section>
