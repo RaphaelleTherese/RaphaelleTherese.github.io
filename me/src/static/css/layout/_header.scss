@@ -137,6 +137,21 @@
 			}
 		}
 
+		.logo {
+			border-bottom: 0;
+			display: inline-block;
+			// margin: 0 0 (_size(element-margin) * 0.5) 0;
+			overflow: hidden;
+			position: relative;
+
+			img {
+				height: 4em;
+				border-radius: 50%;
+				display: block;
+                margin-top: 0.5em;
+			}
+		}
+
 		@include breakpoint(medium) {
 			.links {
 				display: none;
@@ -156,6 +171,13 @@
 					display: none;
 				}
 			}
+
+            .logo img {
+                height: 3em;
+                border-radius: 50%;
+                display: block;
+                margin-top: 0.5em;
+            }
 		}
 	}
 

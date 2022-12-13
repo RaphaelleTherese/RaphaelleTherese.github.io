@@ -4,10 +4,15 @@ import { Link } from 'react-router-dom';
 import Hamburger from './Hamburger';
 import routes from '../../data/routes';
 
+const { PUBLIC_URL } = process.env; // set automatically from package.json:homepage
+
 // Websites Navbar, displays routes defined in 'src/data/routes'
 const Navigation = () => (
   <header id="header">
     <h1 className="index-link">
+        {/* <Link to="/" className="logo">
+            <img src={`${PUBLIC_URL}/images/drawn.png`} alt="" />
+        </Link> */}
       {routes.filter((l) => l.index).map((l) => (
         <Link key={l.label} to={l.path}>{l.label}</Link>
       ))}

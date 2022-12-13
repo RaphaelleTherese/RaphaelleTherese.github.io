@@ -1,25 +1,25 @@
 const routes = [
     {
-      index: true,
-      label: "Raphaelle Therese Guinanao",
-      path: '/',
+        index: true,
+        label: "RG",
+        path: '/',
     },
     {
-      label: 'about',
-      path: '/about',
+        label: 'about',
+        path: '/about',
     },
     {
-      label: 'resume',
-      path: '/resume',
+        label: 'resume',
+        path: '/resume',
     },
     {
-      label: 'projects',
-      path: '/projects',
+        label: 'projects',
+        path: '/projects',
     },
     {
-      label: 'contact',
-      path: '/contact',
+        label: 'contact',
+        path: '/contact',
     },
-  ];
+];
   
-  export default routes;
+export default routes;

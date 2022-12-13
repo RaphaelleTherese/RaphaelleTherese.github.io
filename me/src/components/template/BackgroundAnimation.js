@@ -19,17 +19,21 @@ const BackgroundAnimation = () => {
     const shapeMake = () => {
         for(let i = 0; i < NUM_SHAPES_MAKE; i++){
             let name = "s" + (Math.floor(Math.random() * NUM_ICONS_AVAILABLE) + 1);
-            let data = {
-                multiplier: Math.random() * 100 - 50
-            }
+            let multiplier = Math.random() * 100 - 50;
             shapes[i] = React.createElement('div', { 
                 key: name + "_" + i, 
                 id: name + "_" + i,
                 className: name,
-                'data-parallax-multiplier':  data.multiplier,
+                'data-parallax-multiplier':  multiplier,
             });
         }
+        setShapes(shapes);
+    }
 
+    // Add animations of all shapes
+    const animateShapes = () => {
+        let finishedShapes = 0;
+        const mainCallout = ReactDOM.findDOMNode(document.getElementById("main-callout"));
         const nextShapes = shapes.map((shape, i) => {
             const theta = i / shapes.length * Math.PI * 2;
             const rotation = Math.random() * 360;
@@ -45,25 +49,15 @@ const BackgroundAnimation = () => {
                     'data-rotation': rotation,
                 }
             );
-
             shapes[i] = newShape;
-            return newShape;
-        });
-        setShapes(nextShapes);
-    }
 
-    // Add animations of all shapes
-    const animateShapes = () => {
-        let finishedShapes = 0;
-        const mainCallout = ReactDOM.findDOMNode(document.getElementById("main-callout"));
-        shapes.map((shape, i) => {
             animationRef.current = anime({
                 targets: document.getElementById(shape.props['id']),
-                translateX: Number(shape.props['data-x']),
-                translateY: Number(shape.props['data-y']),
+                translateX: x,
+                translateY: y,
                 rotateY: anime.random(-60, 60),
                 rotateX: anime.random(-60, 60),
-                rotateZ: Number(shape.props['data-rotation']),
+                rotateZ: rotation,
                 opacity: 1,
                 delay: 200,
                 duration: anime.random(750, 1500),
@@ -128,11 +122,18 @@ const BackgroundAnimation = () => {
                     });
                 }
             });
+            
+            return newShape;
         });
+        
+        setShapes(nextShapes);
     }
 
     const animationRef = React.useRef(null);
     React.useEffect(() => {
+        shapeMake();
+        animateShapes();
+
         animationRef.current = anime({
             targets: ".name-letter",
             opacity: [0, 1],
@@ -152,20 +153,16 @@ const BackgroundAnimation = () => {
             targets: ".backdrop",
             opacity: [0, 1],
             translateY: [-50, 0],
-            delay: 500,
         })
         
         animationRef.current = anime({
             targets: ".meme",
             opacity: [0, 1],
             translateY: [-45, 0],
-            delay: 500,
         })
-        
-        shapeMake();
-        animateShapes();
     }, []);
 
+    let finish = 0;
     return (
         <div className="main-callout" id="main-callout">
             {shapes.map((shape) => {
