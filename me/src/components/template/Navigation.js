@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Hamburger from './Hamburger';
 import routes from '../../data/routes';
 
-const { PUBLIC_URL } = process.env; // set automatically from package.json:homepage
+// const { PUBLIC_URL } = process.env; // set automatically from package.json:homepage
 
 // Websites Navbar, displays routes defined in 'src/data/routes'
 const Navigation = () => (

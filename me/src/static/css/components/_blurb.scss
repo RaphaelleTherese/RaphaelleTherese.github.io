@@ -19,4 +19,24 @@
 		p {
 			font-size: 0.9em;
 		}
+
+        // Moved from intro
+		.logo {
+			border-bottom: 0;
+			display: inline-block;
+			margin: 0 0 (_size(element-margin) * 0.5) 0;
+			overflow: hidden;
+			position: relative;
+
+			img {
+				width: 10em;
+				border-radius: 50%;
+				display: block;
+			}
+		}
+		@include breakpoint(small) {
+			.logo {
+				margin: 0 0 (_size(element-margin) * 0.25) 0;
+			}
+		}
 	}

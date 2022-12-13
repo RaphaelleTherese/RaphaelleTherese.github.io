@@ -19,10 +19,13 @@ const SideBar = () => (
 
     <section className="blurb">
         <header>
-            <h2>Hi, I'm Raphaelle Therese</h2>
+            <Link to="/" className="logo">
+                <img src={`${PUBLIC_URL}/images/me.jpg`} alt="" />
+            </Link>
+            <h2>Hi, I&apos;m Raphaelle Therese</h2>
         </header>
         <p>I love to learn and build things.</p>
-        <p>I studied Computer Science at the University of Arizona and have had a plethora of experiences working with the <a href="https://techcore.arizona.edu/" target="_blank">Tech Core</a>, <a href="https://madelab.arizona.edu/" target="_blank">UArizona Space Grant</a>, <a href="https://plaid.com/" target="_blank">Plaid</a>, and <a href="https://www.rtx.com/" target="_blank">Raytheon</a>.</p>
+        <p>I studied Computer Science at the University of Arizona and have had a plethora of experiences working with the <a href="https://techcore.arizona.edu/TeamProfiles.aspx?individual=rtguinanao" target="_blank" rel="noreferrer">Tech Core</a>, <a href="https://madelab.arizona.edu/" target="_blank" rel="noreferrer">UArizona Space Grant</a>, <a href="https://plaid.com/" target="_blank" rel="noreferrer">Plaid</a>, and <a href="https://www.rtx.com/" target="_blank" rel="noreferrer">Raytheon</a>.</p>
         <p>Feel free to browse and <a href="mailto:rtguinanao@gmail.com">reach out!</a></p>
 
         <ul className="actions">

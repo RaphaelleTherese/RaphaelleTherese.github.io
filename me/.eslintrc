@@ -7,7 +7,13 @@
     "jest": true
   },
   "rules": {
+    "no-multiple-empty-lines": [2, {"max": 99999, "maxEOF": 0}],
+    "react/jsx-indent": "off",
+    "indent": "off",
+    "react/jsx-indent-props": "off",
     "linebreak-style": ["error", "windows"],
+    "object-curly-spacing": "off",
+    "no-trailing-spaces": [0, "ignore-comments"],
     "jsx-a11y/anchor-is-valid": ["error", {
       "components": ["Link"],
       "specialLink": ["to", "hrefLeft", "hrefRight"],

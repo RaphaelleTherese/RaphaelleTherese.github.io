@@ -11,9 +11,9 @@ const BackgroundAnimation = () => {
     const NUM_ICONS_AVAILABLE = 14;
     const NUM_SHAPES_MAKE = 100;
     
-    const isMobile = () => {  
-        return window.innerWidth < 700;
-    }
+    const isMobile = () => (
+        window.innerWidth < 700
+    );
 
     // Create all shapes into object
     const shapeMake = () => {
@@ -127,7 +127,7 @@ const BackgroundAnimation = () => {
         });
         
         setShapes(nextShapes);
-    }
+    };
 
     const animationRef = React.useRef(null);
     React.useEffect(() => {
@@ -173,17 +173,17 @@ const BackgroundAnimation = () => {
             <img className = 'meme' src={meme} />
             <div className="my-name">
                 <noscript> Raphaelle Guinanao</noscript>
-                <h2>{
-                    nameSplit.map((stringPart, index) => {
-                        return <span className='name-letter' key={index}>{stringPart}</span> 
-                    })
-                }</h2>
+                <h2>
+                {
+                    nameSplit.map((stringPart, index) => ( <span className="name-letter" key={"name" + index}>{stringPart}</span> ))
+                }
+                </h2>
             </div>
             <div className="subtitle">
                 <p>Software Engineer | 2023</p>
             </div>
         </div>
     );
-}
+};
 
 export default BackgroundAnimation;

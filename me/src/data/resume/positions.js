@@ -1,110 +1,58 @@
 const positions = [
-  {
-    company: 'Arthena',
-    position: 'Co-founder, C.T.O.',
-    link: 'https://arthena.com',
-    daterange: 'January 2014 - Present',
-    points: [
-      'Deployed quantitative strategies to predict the value of fine art in various pricing contexts.',
-      'Built production, on-line, end-to-end optimized machine learning pipelines with Pandas, Numpy, Scikit, Tensorflow, Dagster, Postgres, etc. on GCP with Kubernetes.',
-      'Designed micro-service architecture around: data collection, data integrity, feature engineering, research, strategy, backtesting, deployment, and reporting.',
-      'YC Alumn. Worked on everything. Built a 16-person team. Operated company for 6+ years.',
-    ],
-  },
-  {
-    company: 'Skeptical Investments',
-    position: 'Co-founder',
-    link: 'http://skepticalinvestments.biz',
-    daterange: 'April 2017 - Present',
-    points: [
-      'Founded a micro-vc fund to throw token amounts of money at problems I find interesting.',
-      'Created the InstaSafe. Fast, automated investment docs for YC companies.',
-    ],
-  },
-  {
-    company: 'Enveritas',
-    position: 'Consultant',
-    link: 'http://enveritas.org',
-    daterange: 'September 2016 - 2018',
-    points: [
-      'Trained a model for the Brazilian Coffee Scenes Dataset with better than state of the art accuracy.',
-      'Collected training sets on the ground in Uganda. Built dashboards to visualize work of surveyors using Flask, React, and D3.',
-      'Performed supporting analysis to ensure data integrity using Pandas, t-SNE, SVM’s, and other techniques.',
-    ],
-  },
-  {
-    company: 'Zenysis',
-    position: 'Consultant',
-    link: 'https://zenysis.com',
-    daterange: 'February 2016 - March 2016',
-    points: [
-      'Worked in Addis Ababa for the Ethiopian Ministry of Health and built data visualization tools in React and Flask.',
-      'Ingested multiple databases with different alphabets, calendars, and without official spellings of geographic locations.',
-    ],
-  },
-  {
-    company: 'Matroid',
-    position: 'Co-founder',
-    link: 'https://matroid.com',
-    daterange: 'July 2015 - January 2016',
-    points: [
-      'Developed end to end machine learning pipeline to train visual classifiers from keywords using Node.JS, Express, Keystone, MongoDB, AWS, S3, Caffe, and other technologies.',
-      'Received Series A term sheets for 20M+ valuations.',
-    ],
-  },
-  {
-    company: 'Planet',
-    position: 'Missions Intern',
-    link: 'https://planet.com',
-    daterange: 'June 2014 - January 2015',
-    points: [
-      'Built models to improve image quality, signal to noise ratio, and dynamic range.',
-      'Performed statistical analysis of image quality in Matlab and Python.  Developed flight software in C++.',
-      'Organized first hackathon, prototyped hardware, and designed and built photography equipment for rocket launches.',
-    ],
-  },
-  {
-    company: 'Planetary Resources',
-    position: 'Avionics Intern',
-    link: 'http://planetaryresources.com',
-    daterange: 'January 2014 - May 2014',
-    points: [
-      'Developed simulations in Matlab for Attitude Determination and Control Subsystem.',
-      'Developed processes for in lab testing and characterization of various subsystems.',
-      'Assembled flight hardware in cleanroom.',
-    ],
-  },
-  {
-    company: 'Facebook',
-    position: 'Intern',
-    link: 'https://facebook.com',
-    daterange: 'June 2013 - September 2013',
-    points: [
-      'Developed software in python for automated testing of servers.',
-      'Performed statistical analysis with R, HIVE to assist in triage of malfunctioning servers.',
-      'Worked with vendors and ODM’s during triage to assist in risk mitigation.',
-    ],
-  },
-  {
-    company: 'SEDS-USA',
-    position: 'At Large Board Member',
-    link: 'http://seds.org',
-    daterange: 'October 2013 - October 2014',
-    points: [
-      'Elected to Board of Directors of the USA’s largest student space advocacy group based on 5+ years of work with SEDS.',
-      'Responsibilities included: organizational strategy, conference presentations, fundraising, special projects, promoting SEDS nationally and internationally, and photographing conferences.',
-    ],
-  },
-  {
-    company: 'UB Nanosatellite Program',
-    position: 'Co-founder, Program Manager',
-    link: 'https://ubnl.space/',
-    daterange: 'October 2010 – June 2012',
-    points: [
-      'Coauthored grant to build a multi-spectral imaging satellite as part of the AFRL University Nanosatellite Program.',
-      'Lead a team of 60 students through satellite development life cycle. Served as a technical expert, acquired intimate working knowledge of satellite subsystems.  Solicited funding through NASA, AFOSR, and several corporate sponsors.',
-    ],
-  },
+    {
+        company: 'Raytheon',
+        position: 'Software Engineer Intern',
+        link: 'https://techcore.arizona.edu/TeamProfiles.aspx?individual=rtguinanao',
+        daterange: 'August 2022 - Present',
+        points: [
+            'Developing embedded systems for SM3 IIA in C++',
+        ],
+    },
+    {
+        company: 'Plaid',
+        position: 'Software Engineer Intern',
+        link: 'https://techcore.arizona.edu/TeamProfiles.aspx?individual=rtguinanao',
+        daterange: 'May 2022 - August 2022',
+        points: [
+            'Worked with the Dashboard Platform Team',
+            'Designed and managed project, creating spec and engaging with feedback for capstone project, a self-serve troubleshoot tool for customers in the dashboard.',
+            'Developed a full-stack project: employing front-end components in React, Redux, and Typescript and back-end HTTP/gRPC endpoints in Go, modeling protobufs and elasticsearch tables. Tested using Jenkins and deployed to the company\'s public dashboard.',
+            'Handled Kibana for querying through millions of elasticsearch Plaid customer data every hour.',
+        ],
+    },
+    {
+        company: 'UArizona NASA Space Grant',
+        position: 'Space Grant Intern',
+        link: 'https://madelab.arizona.edu/',
+        daterange: 'September 2021 - May 2022',
+        points: [
+            'Exploring the impact of part geometry and process parameters on the accuracy of Additive Manufacturing parts with Dr. Hannah Budinoff in the MADE Lab',
+            'Presented on Enabling Part-Process Design for Metal Additive Manufacturing at the 31st annual state Space Grant Consortium',
+            'Experienced with laboratory equipment: laser scanners, supercomputers, spectrum analyzers',
+            'Analyzed over 50 3D models for distortion using ANSYS.',
+        ],
+    },
+    {
+        company: 'University of Arizona',
+        position: 'Undergraduate Teaching Assistant',
+        link: 'https://www.cs.arizona.edu/',
+        daterange: 'August 2020 - May 2021',
+        points: [
+            'Assisted in teaching Introduction to Programming II, with over 20 students a semester, all with varying programming experience',
+            'Interact with students on programming projects in Python every week, helping them debug or understand programming concepts from recursion to binary search trees.',
+            'Graded at least 40 programming assignments a week and coordinated with other TAs on creating a better learning experience',
+        ],
+    },
+    {
+        company: 'Tucson Fringe Festival',
+        position: 'Intern',
+        link: 'https://www.tucsonfringe.org/',
+        daterange: 'October 2017 - November 2017, October 2018 - November 2018',
+        points: [
+            'Designed and maintained multiple pages on the Tucson Fringe Festival Website using WordPress (with HTML/ CSS) and Square',
+            'Created the festival\'s programs and handouts using Google software and GIMP/Adobe Photoshop',
+        ],
+    },
 ];
 
 export default positions;
