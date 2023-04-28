@@ -2,7 +2,7 @@ const positions = [
     {
         company: 'Raytheon',
         position: 'Software Engineer Intern',
-        link: 'https://techcore.arizona.edu/TeamProfiles.aspx?individual=rtguinanao',
+        link: 'https://www.rtx.com/',
         daterange: 'August 2022 - Present',
         points: [
             'Developing embedded systems for SM3 IIA in C++',
@@ -11,13 +11,24 @@ const positions = [
     {
         company: 'Plaid',
         position: 'Software Engineer Intern',
-        link: 'https://techcore.arizona.edu/TeamProfiles.aspx?individual=rtguinanao',
+        link: 'https://plaid.com/',
         daterange: 'May 2022 - August 2022',
         points: [
             'Worked with the Dashboard Platform Team',
             'Designed and managed project, creating spec and engaging with feedback for capstone project, a self-serve troubleshoot tool for customers in the dashboard.',
             'Developed a full-stack project: employing front-end components in React, Redux, and Typescript and back-end HTTP/gRPC endpoints in Go, modeling protobufs and elasticsearch tables. Tested using Jenkins and deployed to the company\'s public dashboard.',
             'Handled Kibana for querying through millions of elasticsearch Plaid customer data every hour.',
+        ],
+    },
+    {
+        company: 'Tech Core',
+        position: 'Software Developer, Database Administrator, Mentor',
+        link: 'https://techcore.arizona.edu/TeamProfiles.aspx?individual=rtguinanao',
+        daterange: 'August 2019 - May 2022',
+        points: [
+            'Developing, designing, and deploying over 10 large full-stack projects on a regular basis using technologies like .NET Framework, HTML/CSS/JS, REST APIs, C# in Unity, and more.',
+            'Communicating and interacting with clients around the university regularly to manage ideas into projects. Leading my own teams in projects as well as familiarizing over 100 interns with developing web applications and navigating through project management workflow.',
+            'Responsible for overlooking several servers enforcing data integrity across multiple applications as a database administrator. Created SQL scripts to automate database installation processes and backups, saving developers hours on developing back-end endpoints.',
         ],
     },
     {

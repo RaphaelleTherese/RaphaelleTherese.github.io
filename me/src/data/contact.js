@@ -11,6 +11,11 @@ const data = [
     icon: faGithub,
   },
   {
+    link: 'https://github.com/RTGuinanao/',
+    label: 'Github',
+    icon: faGithub,
+  },
+  {
     link: 'https://www.linkedin.com/in/rtguinanao',
     label: 'LinkedIn',
     icon: faLinkedinIn,
