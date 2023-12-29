@@ -1,0 +1,90 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    width: 640px;
+    margin: auto;
+}
+#header{
+    text-align: center;
+    font-weight: 900;
+    font-size: 2em;
+}
+.row{
+    width: 100%;
+    margin-top: 15px;
+}
+.circle{
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 25px lightgray;
+    cursor: crosshair;
+}
+.circle:hover{
+    box-shadow: 0 0 15px lightgray;
+    opacity: 0.85;
+}
+.circle:nth-child(2){
+    margin: 0 15px ;
+}
+.col1{
+   background-color: indianred;
+}
+.col2{
+    background-color: crimson;
+}
+/* Styling for Popup */
+#popup{
+    width: 500px;
+    height: 500px;
+    background-color: darkred;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 25px;
+    box-shadow: 0 0 20px lightgray;
+    visibility: hidden;
+}
+.button{
+  background-color: firebrick;
+    color: black; 
+    width: 130px;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.button:hover{
+    cursor: pointer;
+    opacity: .75;
+    transform: translateX(-50%) scale(1.05);
+}
+.button:active{
+    opacity: .25;
+}
+.score{
+    color: white;
+    width: 50%;
+    float: left;
+}
+#go1, #go2{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: firebrick;
+    margin-right: 10px;
+    float: left;
+    margin-top: 4px;
+}
+#go2{
+    background-color: transparent;
+}

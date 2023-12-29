@@ -1,0 +1,41 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta content="IE=edge" http-equiv="X-UA-Compatible"><meta content="width=device-width,initial-scale=1" name="viewport"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --><title>Educational Enhancement</title><!-- Bootstrap --><link href="css/bootstrap.min.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato" rel="stylesheet"><link href="Images/favicon.ico" rel="shortcut icon" type="image/x-icon"><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --><!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]--><link href="https://fonts.googleapis.com" rel="preconnect"><link href="https://fonts.gstatic.com" rel="preconnect"><link href="https://ajax.googleapis.com" rel="preconnect"></head><body><!-----NAVBAR-----><nav class="navbar navbar-default navbar-fixed-top"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display --><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" aria-expanded="false" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav"></ul><ul class="nav navbar-nav"><li class="navbar-link"><a href="index.html">Home</a></li><li class="navbar-link"><a href="resume.html">Resume</a></li><li class="navbar-link"><a href="careerSummary.html">Career Summary</a></li><li class="navbar-link"><a href="careerEducation.html">Career-Related Education</a></li><li class="navbar-link"><a href="#">Educational Enhancement</a></li><li class="navbar-link"><a href="specialSkills.html">Special Skills</a></li></ul></div><!-- /.navbar-collapse --></div><!-- /.container-fluid --></div></nav><div class="headerOther"><div class="jumbotron jumbotron-style educationalEnhancementJumbotron"><div class="container educationalEnhancement"><h1>Educational Enhancement</h1><p>A description of my involvement in the community and work experience regarding my desired occupation.</p></div></div></div><div class="container"><!-----ABOUT-----><div class="row well well-sm educationalEnhancement-info"><ul><h3><li>Community Involvement</li></h3><hr class="style-two"><h4>University High School Parents Association</h4><p>With the UHSPA, I volunteered as their Student Helper for their Wix website. Not only did I help maintain and update the page over the course of my high school career, but I also helped redesign the site overall.</p><h4>Pima County - Kirk Bear Canyon Library</h4><p>In the summer of 2018, I started volunteering at the nearest library. I've been able to help and assist children and teens through hands-activities and also helped start the Code Club which introduces children to programming through web development, game development, and app development.</p><h3><li>Work Experience</li></h3><hr class="style-two"><h4>Tucson Fringe Festival</h4><p>Interned at the Tucson Fringe Festival for two years, in which I helped maintain their WordPress website, Square website, and program.</p><h4>University High School Alumni Association</h4><p>Was paid for teaching an officer from the UHSPAA to teach her how to navigate and use the content management software, WordPress, and also made changes of my own.</p></ul></div></div><!------FOOTER-----><footer class="footer" id="contact"><h3 style="text-align:center">CONTACT ME!</h3><div class="container"><div class="row"><div class="col-md-4"><h4>School Address<br><small>421 N Arcadia Ave,<br>Tucson, AZ 85749</small></h4></div><div class="col-md-4"><h4>Phone<br><small>(520)-878-6888</small></h4></div><div class="col-md-4"><h4>Email<br><small><a href="mailto:RTGuinanao@gmail.com">RTGuinanao@gmail.com</a></small></h4></div></div></div><form action=""><div class="form-group"><label for="exampleInputEmail1">Email address</label> <input aria-describedby="emailHelp" class="form-control" id="exampleInputEmail1" placeholder="Enter email" type="email"> <small class="form-text text-muted" id="emailHelp">We'll never share your email with anyone else.</small></div><div class="form-group"><label for="exampleFormControlTextarea1">Message</label> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></div><button class="btn btn-primary" type="submit">Submit</button></form></footer><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!-- Include all compiled plugins (below), or include individual files as needed --><script src="js/bootstrap.min.js"></script><script>$(".navbar-brand").click(function() {
+            $('html,body').animate({
+            scrollTop: $(".header").offset().top},
+            'slow');
+        });
+        $(".down").click(function() {
+            $('html,body').animate({
+            scrollTop: $(".jumbotron").offset().top},
+            'slow');
+        }); 
+        $(document).ready(function(){
+              // Add smooth scrolling to all links
+              $("a").on('click', function(event) {
+
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
+
+
+                  // Store hash
+                  var hash = this.hash;
+
+
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                  $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                  }, 800, function(){
+
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                  });
+                } // End if
+              });
+            });</script></body></html>
