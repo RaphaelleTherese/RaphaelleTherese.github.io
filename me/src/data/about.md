@@ -1,14 +1,14 @@
 
 # Intro
 
-I am a software engineer with experience in Full-Stack Development and Embedded Systems. As a curious learner with a sense of initiative, I've tried to dabble in a little bit of everything from working in research, teaching, web/full-stack development, fintech, and defense and embedded systems. I am particularly interested in developing projects that have an impact on everyday people. If you think I can be helpful to you or would like to meet me, please feel free to get in touch.
+Hey I'm Raphaelle Guinanao, a dedicated software engineer with experience in Full-Stack Development and Embedded Systems. As a curious learner with a sense of initiative, I've tried to dabble in a little bit of everything from working in research, teaching, web/full-stack development, mixed reality, fintech, and defense and embedded systems. I'm known for delivering impactful results while being able to adapt and grow quickly through evolving situations by means of effective cross-team communication and strategic thinking.
 
-# I like
+# What I like 💖
 
-- Watching and analyzing movies (wannabe film buff)
-- Reading comics
-- Falling down the YouTube rabbit-hole
-- Karaoke
+- 🍿 Aspiring movie buff (yes, I have Letterboxd)
+- 📚 Comic connoisseur. Superheroes, webtoons, manga -- I'll read them all!
+- 📺 Diving headfirst into the YouTube rabbit-hole abyss
+- 🎤 Karaoke 💃 <sub>(i'm filipino)</sub>
 
 <!-- # Fun facts
 

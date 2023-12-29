@@ -18,7 +18,7 @@
       font-size: 0.9rem;
       margin: 0;
       padding: 1.25em;
-      background-color: rgba(255,255,255,.7);
+      background-color: rgba(255,255,255,.95);
       color: #3c3b3b;
       font-family: "Raleway", Helvetica, sans-serif;
       z-index: 1000;
@@ -26,8 +26,8 @@
       -webkit-transition: all 0.1s ease-in-out;
     }
 
-    p:hover {
-      background-color: rgba(255,255,255,.9);
+    a {
+        cursor: pointer;
     }
   }
   

@@ -7,7 +7,8 @@ const positions = [
         points: [
             'Contributed to the improvement of software quality by fixing bugs, developing comprehensive unit tests, and achieving high code coverage, resulting in reduced defects and enhanced development',
             'Enhanced error telemetry by introducing additional fields, enabling faster resolution of issues',
-            'Collaborated and improved team velocity by proactively communicating cross-team, participating in code reviews, and enhancing software tools to improve development processes','Conducted simulations of embedded system products on different machines, collecting and analyzing data to validate system functionality and ensure compliance with project requirements and customer specifications',
+            'Collaborated and improved team velocity by proactively communicating cross-team, participating in code reviews, and enhancing software tools to improve development processes',
+            'Conducted simulations of embedded system products on different machines, collecting and analyzing data to validate system functionality and ensure compliance with project requirements and customer specifications',
         ],
     },
     {
@@ -15,7 +16,6 @@ const positions = [
         position: 'Software Engineer Intern',
         link: 'https://www.rtx.com/',
         daterange: 'August 2022 - April 2023',
-        points: [ ],
     },
     {
         company: 'Plaid',
