@@ -8,7 +8,7 @@ Search Engine - Python, Cython, Flask, HTML, CSS
 realtime object finder in camera - React, Express.js, PostgreSQL, Clarifai API
 discord bot - conversational ai 
 compiler for my own language?
-plug and play dynamic crud system/ api for js?
+plug and play dynamic crud system/ api for js? (and maybe mongo db or somme other db? CockroachDB?)
 
 Loading screen is a me in an island coding, surrounded by a bit filled red sea swaying
  INTRO - WELCOME TO MY PORTFOLIO In big pastel red on the left, to the right is an animated me in front of a screen with cool sunglasses On the left should be the navbar, each page is shown with a small light white dot a bit transparent On the next page should be a zoomed in version of the laptop. Light green text in code about me. on the right of the laptop is the emulator where you can interact with pages about me PROJECTS - Can be in the form of like a YouTube page or somethingcd
