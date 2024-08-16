@@ -180,7 +180,7 @@ const BackgroundAnimation = () => {
                 </h2>
             </div>
             <div className="subtitle">
-                <p>Software Engineer | 2023</p>
+                <p>Software Engineer | 2024</p>
             </div>
         </div>
     );
